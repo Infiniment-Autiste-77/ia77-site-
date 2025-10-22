@@ -1,0 +1,149 @@
+# ia77-site-
+<!-- ===== IA77 • Tarifs & Prestations ===== -->
+<section id="tarifs-ia77">
+  <style>
+    :root{
+      --ia77-blue:#173A5E;      /* bleu foncé IA77 */
+      --ia77-teal:#1AA2A0;      /* vert/bleu IA77 */
+      --ink:#0f172a;
+      --muted:#475569;
+      --bg:#f5f7fb;
+      --card:#ffffff;
+      --ring:rgba(26,162,160,.25);
+      --shadow:0 8px 24px rgba(2,8,23,.08);
+      --radius:14px;
+    }
+    #tarifs-ia77{
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      padding: 56px 20px;
+    }
+    #tarifs-ia77 .wrap{
+      max-width: 980px; margin: 0 auto;
+    }
+    #tarifs-ia77 .kicker{
+      color: var(--ia77-teal); font-weight: 700; letter-spacing:.06em; text-transform: uppercase;
+      margin:0 0 6px;
+    }
+    #tarifs-ia77 h2{
+      margin:0 0 14px; font-size: clamp(28px,3.2vw,36px); color: var(--ia77-blue);
+      line-height:1.15;
+    }
+    #tarifs-ia77 p.lead{
+      color: var(--muted); margin:0 0 28px; font-size: clamp(16px,2.2vw,18px);
+    }
+    /* grid */
+    #tarifs-ia77 .grid{
+      display:grid; gap: 18px; grid-template-columns: 1fr;
+    }
+    @media (min-width:860px){
+      #tarifs-ia77 .grid{ grid-template-columns: 1.2fr .8fr; }
+    }
+    /* cards */
+    #tarifs-ia77 .card{
+      background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
+      padding: 22px;
+      border:1px solid #e8eef6;
+    }
+    #tarifs-ia77 .card h3{
+      margin:0 0 10px; color: var(--ia77-blue); font-size: 20px;
+      display:flex; align-items:center; gap:10px;
+    }
+    #tarifs-ia77 .card h3 .dot{
+      width:12px; height:12px; border-radius:50%; background: var(--ia77-teal); display:inline-block;
+    }
+    #tarifs-ia77 ul{ margin:0; padding-left: 18px; color: var(--ink); }
+    #tarifs-ia77 li{ margin: 8px 0; }
+    /* table */
+    #tarifs-ia77 .tbl{
+      width:100%; border-collapse: collapse; margin-top:6px; font-size: 15px;
+    }
+    #tarifs-ia77 .tbl th, #tarifs-ia77 .tbl td{
+      border:1px solid #e7edf6; padding:12px; text-align:left;
+    }
+    #tarifs-ia77 .tbl th{ background:#f0f6fb; color: var(--ia77-blue); }
+    #tarifs-ia77 .price{ font-weight:700; color: var(--ia77-teal); white-space:nowrap; }
+    /* callouts */
+    #tarifs-ia77 .callout{
+      margin-top:18px; padding:14px 16px; border-radius:12px; background:#eefaf9; border:1px solid var(--ring);
+      color:#0b3c3b;
+    }
+    /* buttons row */
+    #tarifs-ia77 .actions{
+      display:flex; flex-wrap:wrap; gap:12px; margin-top:22px;
+    }
+    #tarifs-ia77 .btn{
+      appearance:none; border:1px solid transparent; border-radius:12px; padding:12px 16px;
+      text-decoration:none; display:inline-flex; align-items:center; gap:8px; font-weight:700;
+      box-shadow: var(--shadow);
+    }
+    #tarifs-ia77 .btn.primary{ background: var(--ia77-teal); color:#fff; }
+    #tarifs-ia77 .btn.ghost{ background:#fff; color: var(--ia77-blue); border-color:#e1eaf4; }
+    #tarifs-ia77 .btn:focus-visible{ outline:3px solid var(--ring); outline-offset:2px; }
+    /* small footer line */
+    #tarifs-ia77 .mini{
+      margin-top:26px; color: var(--muted); font-size: 14px;
+    }
+  </style>
+
+  <div class="wrap">
+    <p class="kicker">IA77</p>
+    <h2>Tarifs & prestations</h2>
+    <p class="lead">Accompagnements personnalisés et solidaires pour les familles. Adhésion annuelle : <strong>15&nbsp;€</strong>.</p>
+
+    <div class="grid">
+      <!-- === Col 1 : détails + tableau === -->
+      <div class="card">
+        <h3><span class="dot"></span>Démarches administratives</h3>
+        <table class="tbl" aria-label="Tarifs démarches administratives">
+          <thead>
+            <tr><th>Prestation</th><th>Tarif</th><th>Détails</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Dossier simple</td><td class="price">25 €</td><td>MDPH, CAF, école, etc.</td></tr>
+            <tr><td>Dossier complexe</td><td class="price">40 €</td><td>Cas nécessitant analyses et pièces multiples</td></tr>
+            <tr><td>Accompagnement personnalisé</td><td class="price">15 €/h</td><td>Explications & démarches pas-à-pas</td></tr>
+          </tbody>
+        </table>
+
+        <h3 style="margin-top:18px;"><span class="dot"></span>Prestations éducatives</h3>
+        <ul>
+          <li><strong>15 € / heure</strong> — intervenant psycho-éducatif</li>
+        </ul>
+
+        <h3 style="margin-top:18px;"><span class="dot"></span>Cotisations</h3>
+        <ul>
+          <li><strong>50 € / demi-journée</strong> (versés à l’association)</li>
+          <li>Tarif bloqué au-delà de <strong>4 demi-journées</strong></li>
+          <li><strong>–10 €</strong> sur la cotisation complète pour la fratrie</li>
+        </ul>
+
+        <div class="callout" role="note">
+          💡 <strong>Réduction adhérents IA77 :</strong> –20 % sur l’accompagnement personnalisé.
+        </div>
+      </div>
+
+      <!-- === Col 2 : pratiques + dons + contacts === -->
+      <div class="card">
+        <h3><span class="dot"></span>Matériel à fournir</h3>
+        <ul>
+          <li>Stylos, crayons de couleur, feutres, colle</li>
+          <li>3 grands cahiers à grands carreaux</li>
+          <li>1 paquet de feuilles blanches pour imprimante</li>
+          <li>Le reste du matériel est pris en charge par l’association</li>
+        </ul>
+
+        <h3 style="margin-top:18px;"><span class="dot"></span>Repas & goûter</h3>
+        <p>Si l’enfant reste la journée, le repas et le goûter sont fournis par les parents.</p>
+
+        <div class="actions">
+          <a class="btn primary" href="https://www.helloasso.com/associations/infiniment-autiste-77/collectes/sos-ia77" target="_blank" rel="noopener">❤️ Faire un don (HelloAsso)</a>
+          <a class="btn ghost" href="https://www.cotizup.com/pour-un-nouveau-local" target="_blank" rel="noopener">Soutenir via Cotizup</a>
+        </div>
+
+        <p class="mini">📞 07&nbsp;66&nbsp;37&nbsp;84&nbsp;62 · 📧 infinimentautiste77@gmail.com</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ===== /Tarifs & Prestations ===== -->
